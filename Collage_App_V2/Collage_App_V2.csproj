@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5D8994F-3830-4FCD-81F0-5910438E96EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Collage_App_V2</RootNamespace>
+    <AssemblyName>Collage_App_V2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1" />
+    <Reference Include="DevExpress.Data.v20.1" />
+    <Reference Include="DevExpress.Utils.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CMD_Absence.cs" />
+    <Compile Include="Controller\CMD_Mony.cs" />
+    <Compile Include="Controller\CMD_Scores.cs" />
+    <Compile Include="Controller\CMD_Student.cs" />
+    <Compile Include="Factory\IRepository.cs" />
+    <Compile Include="Factory\Repository.cs" />
+    <Compile Include="HelperClass.cs" />
+    <Compile Include="Model\CLS_Absence.cs" />
+    <Compile Include="Model\CLS_Mony.cs" />
+    <Compile Include="Model\CLS_Score.cs" />
+    <Compile Include="Model\CLS_Student.cs" />
+    <Compile Include="Model\CLS_Users.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FRM_Absence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_Absence.Designer.cs">
+      <DependentUpon>FRM_Absence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_AddMonyRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_AddMonyRecord.Designer.cs">
+      <DependentUpon>FRM_AddMonyRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_AddStudent.Designer.cs">
+      <DependentUpon>FRM_AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_AddStudyBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_AddStudyBook.Designer.cs">
+      <DependentUpon>FRM_AddStudyBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_MonyRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_MonyRecord.Designer.cs">
+      <DependentUpon>FRM_MonyRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FRM_Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FRM_Score.Designer.cs">
+      <DependentUpon>FRM_Score.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FRM_Absence.resx">
+      <DependentUpon>FRM_Absence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_AddMonyRecord.resx">
+      <DependentUpon>FRM_AddMonyRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_AddStudent.resx">
+      <DependentUpon>FRM_AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_AddStudyBook.resx">
+      <DependentUpon>FRM_AddStudyBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_MonyRecord.resx">
+      <DependentUpon>FRM_MonyRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FRM_Score.resx">
+      <DependentUpon>FRM_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Collage_App_V2.Model.CLS_Absence.datasource" />
+    <None Include="Properties\DataSources\Collage_App_V2.Model.CLS_Mony.datasource" />
+    <None Include="Properties\DataSources\Collage_App_V2.Model.CLS_Score.datasource" />
+    <None Include="Properties\DataSources\Collage_App_V2.Model.CLS_Student.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
